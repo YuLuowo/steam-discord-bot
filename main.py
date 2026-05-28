@@ -50,13 +50,13 @@ for game in items:
     if not details:
         continue
 
-    if details["discount"] < 50:
+    if details["discount"] < 90:
         continue
 
     candidates.append(details)
     seen.add(appid)
 
-candidates = sorted(candidates, key=lambda x: x["discount"], reverse=True)[:5]
+candidates = sorted(candidates, key=lambda x: x["discount"], reverse=True)[:8]
 
 def format_price(price):
     return f"NT$ {price:,.0f}"
